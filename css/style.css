@@ -165,3 +165,13 @@ figure:hover a img { filter: grayscale(100%); }
 .contact .btn { margin: 0 0 2em 0; }
 .contact li { display: inline-block; }
 .contact li + li { margin: 0 0 0 3em; }
+
+
+/* FOOTER */
+
+footer {
+  color: white;
+  background: #7a7f82;
+  text-align: center;
+  padding: 2em 0 1em 0;
+}
