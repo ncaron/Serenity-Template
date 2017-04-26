@@ -8,6 +8,7 @@
 body { font: normal 16px/1.5 'Source Sans Pro', sans-serif; }
 a { text-decoration: none; }
 h1, h2 { font-weight: bold; }
+h2 { font-size: 2.5em; }
 strong { font-weight: bold; }
 
 .container {
@@ -34,6 +35,11 @@ strong { font-weight: bold; }
 .btn:hover {
   color: #7a7f82;
   background: white;
+}
+
+section.container h2 {
+  color: #7a7f82;
+  text-align: center;
 }
 
 ::selection { background: rgba(255, 255, 255, .9); }
@@ -84,7 +90,6 @@ header li + li { margin-left: 2.5em; }
 }
 
 .jumbo h2 {
-  font-size: 2.5em;
   padding: 0 0 2em 0;
 }
 
@@ -93,12 +98,7 @@ header li + li { margin-left: 2.5em; }
 
 .about { padding: 2.5em 0 0 0; }
 .about p { padding: 0 0 1em 0; }
-
-.about h2 {
-  color: #7a7f82;
-  font-size: 3.5em;
-  text-align: center;
-}
+.about h2 { font-size: 3.5em; }
 
 .profile-pic {
   height: 200px;
@@ -112,3 +112,39 @@ header li + li { margin-left: 2.5em; }
   position: relative;
   left: -100px;
 }
+
+
+/* PORTFOLIO */
+
+.work { text-align: center; }
+.work h2 { margin: .5em 0; }
+
+figure {
+  display: inline-block;
+  position: relative;
+  height: 300px;
+  margin: .75em 2em;
+  overflow: hidden;
+}
+
+figure figcaption {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  opacity: 0;
+  text-align: center;
+}
+
+figure:hover figcaption {
+  top: 10px;
+  opacity: 1;
+}
+
+figure a {
+  position: relative;
+  top: 0;
+}
+
+figure:hover a { top: 60px; }
+figure:hover a img { filter: grayscale(100%); }
