@@ -41,7 +41,7 @@ h1, h2 { font-weight: bold; }
 
 header {
   color: white;
-  background: url("../images/header-img-precomp.png") 0 0/cover fixed no-repeat;
+  background: #94a4b4 url("../images/header-img-precomp.png") 0 0/cover fixed no-repeat;
   height: 100vh;
   padding: 1em 0 0 0;
   text-align: center;
