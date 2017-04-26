@@ -1,1 +1,88 @@
 @import url("reset.css");
+
+* {
+  box-sizing: border-box;
+  transition: all .3s ease-in-out;
+}
+
+body { font: normal 16px/1.5 'Source Sans Pro', sans-serif; }
+a { text-decoration: none; }
+h1, h2 { font-weight: bold; }
+
+.container {
+  position: relative;
+  max-width: 80em;
+  margin: 0 auto;
+}
+
+.container::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.btn {
+  display: inline-block;
+  font-size: 1em;
+  letter-spacing: normal;
+  padding: .75em 6em;
+  border: 2px solid white;
+  border-radius: .5em;
+}
+
+.btn:hover {
+  color: #7a7f82;
+  background: white;
+}
+
+::selection { background: rgba(255, 255, 255, .9); }
+
+/* HEADER */
+
+header {
+  color: white;
+  background: url("../images/header-img-precomp.png") 0 0/cover fixed no-repeat;
+  height: 100vh;
+  padding: 1em 0 0 0;
+  text-align: center;
+}
+
+header a {
+  color: white;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+}
+
+.logo,
+header nav {
+  display: inline-block;
+  text-transform: uppercase;
+}
+
+.logo {
+  font-size: 2em;
+  font-weight: 600;
+  letter-spacing: 0.075em;
+  float: left;
+}
+
+header nav {
+  line-height: 3.25em;
+  float: right;
+}
+
+header nav a:hover { opacity: .7; }
+header li { display: inline-block; }
+header li + li { margin-left: 2.5em; }
+
+.jumbo { clear: both; }
+
+.jumbo h1 {
+  font-size: 3.5em;
+  padding: 2em 0 .5em 0;
+}
+
+.jumbo h2 {
+  font-size: 2.5em;
+  padding: 0 0 2em 0;
+}
