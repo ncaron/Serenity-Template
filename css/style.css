@@ -91,9 +91,7 @@ header li + li { margin-left: 2.5em; }
   padding: 2em 0 .5em 0;
 }
 
-.jumbo h2 {
-  padding: 0 0 2em 0;
-}
+.jumbo h2 { padding: 0 0 2em 0; }
 
 
 /* ABOUT */
@@ -174,4 +172,117 @@ footer {
   background: #7a7f82;
   text-align: center;
   padding: 2em 0 1em 0;
+}
+
+
+/* HAMBURGER */
+
+.hamburger {
+  position: absolute;
+  right: 3em;
+  top: 2em;
+  z-index: 1;
+  display: none;
+}
+
+.hamburger span {
+  display: block;
+  background: white;
+  height: 5px;
+  width: 30px;
+  margin: 0 0 5px 0;
+}
+
+#top:target > header::after {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: #cdcec0;
+  opacity: .9;
+  content: "";
+  z-index: 1;
+  display: none;
+}
+
+.close {
+  position: absolute;
+  left: 1em;
+  z-index: 3;
+  display: none;
+}
+
+
+/* MEDIA QUERIES */
+
+@media (max-width: 1110px) {
+  .container { max-width: 50em; }
+
+  header {
+    background-attachment: scroll;
+    height: 25%;
+  }
+
+  header nav { float: none; }
+
+  header ul {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    z-index: 2;
+    display: none;
+  }
+
+  header li {
+    display: block;
+    font-size: 2em;
+  }
+
+  header nav a {
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+
+  header li + li { margin: 1em 0 0 0; }
+  .jumbo { padding: 0 0 2em 0; }
+  .jumbo h1 { padding: .075em 0 .5em 0; }
+  .jumbo h2 { padding: 0 0 1em 0; }
+  .hamburger { display: block; }
+  #top:target > header::after { display: block; }
+  #top:target > header ul { display: block; }
+  #top:target > header .close { display: block; }
+}
+
+@media (max-width: 760px) {
+  .jumbo { line-height: 1; }
+
+  .container { max-width: 30em; }
+
+  figure {
+    width: 250px;
+    height: 250px;
+  }
+
+  figure img { width: 100%; }
+}
+
+@media (max-width: 480px) {
+  .container { max-width: 18em; }
+
+  .hamburger {
+    right: 5em;
+    top: 1.5em;
+  }
+
+  header li { font-size: 1.5em; }
+
+  figure {
+    width: 200px;
+    height: 200px;
+  }
+
+  figure img { width: 100%; }
+  .contact li + li { margin: 0 0 0 1em; }
 }
