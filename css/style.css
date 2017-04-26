@@ -2,7 +2,8 @@
 
 * {
   box-sizing: border-box;
-  transition: all .3s ease-in-out;
+  -webkit-transition: all .3s ease-in-out;
+  transition:         all .3s ease-in-out;
 }
 
 a {
@@ -12,9 +13,8 @@ a {
 
 ul a:hover { opacity: .7; }
 body { font: normal 16px/1.5 'Source Sans Pro', sans-serif; }
-h1, h2 { font-weight: bold; }
+h1, h2, strong { font-weight: bold; }
 h2 { font-size: 2.5em; }
-strong { font-weight: bold; }
 
 .container {
   position: relative;
@@ -47,7 +47,8 @@ section.container h2 {
   text-align: center;
 }
 
-::selection { background: rgba(255, 255, 255, .9); }
+::-moz-selection { background: rgba(255, 255, 255, .9); }
+::selection      { background: rgba(255, 255, 255, .9); }
 
 /* HEADER */
 
@@ -55,7 +56,7 @@ header {
   color: white;
   background: #94a4b4 url("../images/header-img-precomp.png") 0 0/cover fixed no-repeat;
   height: 100vh;
-  padding: 1em 0 0 0;
+  padding-top: 1em;
   text-align: center;
 }
 
@@ -91,13 +92,13 @@ header li + li { margin-left: 2.5em; }
   padding: 2em 0 .5em 0;
 }
 
-.jumbo h2 { padding: 0 0 2em 0; }
+.jumbo h2 { padding-bottom: 2em; }
 
 
 /* ABOUT */
 
-.about { padding: 2.5em 0 0 0; }
-.about p { padding: 0 0 1em 0; }
+.about { padding-top: 2.5em; }
+.about p { padding-bottom: 1em; }
 .about h2 { font-size: 3.5em; }
 
 .profile-pic {
@@ -147,7 +148,11 @@ figure a {
 }
 
 figure:hover a { top: 60px; }
-figure:hover a img { filter: grayscale(100%); }
+
+figure:hover a img {
+  -webkit-filter: grayscale(100%);
+  filter:         grayscale(100%);
+}
 
 
 /* CONTACT */
@@ -160,9 +165,9 @@ figure:hover a img { filter: grayscale(100%); }
 }
 
 .contact p { margin: 1em 0 2em 0; }
-.contact .btn { margin: 0 0 2em 0; }
+.contact .btn { margin-bottom: 2em; }
 .contact li { display: inline-block; }
-.contact li + li { margin: 0 0 0 3em; }
+.contact li + li { margin-left: 3em; }
 
 
 /* FOOTER */
@@ -190,7 +195,7 @@ footer {
   background: white;
   height: 5px;
   width: 30px;
-  margin: 0 0 5px 0;
+  margin-bottom: 5px;
 }
 
 #top:target > header::after {
@@ -246,12 +251,13 @@ footer {
   }
 
   header li + li { margin: 1em 0 0 0; }
-  .jumbo { padding: 0 0 2em 0; }
+  .jumbo { padding-bottom: 2em; }
   .jumbo h1 { padding: .075em 0 .5em 0; }
-  .jumbo h2 { padding: 0 0 1em 0; }
-  .hamburger { display: block; }
-  #top:target > header::after { display: block; }
-  #top:target > header ul { display: block; }
+  .jumbo h2 { padding-bottom: 1em; }
+
+  .hamburger,
+  #top:target > header::after,
+  #top:target > header ul,
   #top:target > header .close { display: block; }
 }
 
@@ -284,5 +290,5 @@ footer {
   }
 
   figure img { width: 100%; }
-  .contact li + li { margin: 0 0 0 1em; }
+  .contact li + li { margin-left: 1em; }
 }
